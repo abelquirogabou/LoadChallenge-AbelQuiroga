@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/country.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,600;1,800&family=Playfair+Display:wght@400;700&family=Poppins:wght@100&display=swap"
+        rel="stylesheet">
+
+    <title>countries</title>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <h1>Where in the world?</h3>
+                <button id="darkMode">
+                    <i class="far fa-moon"></i> Dark Mode
+                </button>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="container">
+            <section class="inputs">
+                <form class="search" id="form">
+                    <i class="fas fa-search"></i>
+                    <input type="search" id="inputForm" placeholder="Search for a country...">
+                </form>
+                <div class="filterRegion">
+                    <select name="region" id="region">
+                        <option value="0">Filer by Region</option>
+                        <option value="Africa">Africa</option>
+                        <option value="Americas">Americas</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Oceania">Oceania</option>
+                    </select>
+                </div>
+            </section>
+            <div>
+                <a href="index.html" class="container btn"> <i class="fas fa-long-arrow-alt-left"></i> Back</a>
+
+            </div>
+            <section id="countries" class="countries">
+                <div class="countries-cotainer">
+                    <img src="${item.flags.svg}" alt="">
+                </div>
+                <div class="description container">
+                    <h2>${item.name.common}</h2>
+                    <div class="col-left"></div>
+                    <p><b>Native Name:</b> ${item.name.nativeName}</p>
+                    <p><b>Popularion:</b> ${item.population}</p>
+                    <p><b>Region:</b> ${item.region}</p>
+                    <p><b>Sub Region:</b> ${item.subregion}</p>
+                    <p><b>capital:</b>${item.capital} </p>
+                    <div class="col-right">
+                        <p><b>Top Level Domain</b>${item.tld} </p>
+                        <p><b>Currencies:</b>${item.currencies} </p>
+                        <p><b>Lenguages:</b>${item.languages} </p>
+                    </div>
+                    <div class="borderCountries">
+                        <p><b>Border Countries:</b></p>
+                        <p>${item.borders}</p>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+    </main>
+
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/countryDescription.js"></script>
+</body>
+
+</html>

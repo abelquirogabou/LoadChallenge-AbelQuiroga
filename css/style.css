@@ -1,0 +1,141 @@
+body {
+  font-size: 14px;
+  background-color: hsl(0, 0%, 98%);
+  font-family: 'Nunito Sans', serif;
+}
+body.darkMode a {
+  text-decoration: none;
+  color: none;
+}
+.countryLink {
+  text-decoration: none;
+  color: black;
+  font-family: 'Nunito Sans';
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+header {
+  border-bottom: 2px solid hsla(0, 0%, 52%, 0.1);
+}
+header nav {
+  /*width: 100%;*/
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+}
+header nav h1 {
+  font-size: 14px;
+}
+header nav button {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+main {
+  width: 100%;
+}
+main .container .inputs {
+  display: flex;
+  justify-content: space-between;
+}
+main .container .inputs .search {
+  margin: 3% 0;
+  width: 40%;
+  height: 7vh;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  background-color: #fff;
+  box-shadow: hsl(0, 0%, 52%);
+}
+main .container .inputs .search i {
+  color: hsl(0, 0%, 52%);
+  margin: 0 3%;
+}
+main .container .inputs .search input[type="search"] {
+  color: hsl(0, 0%, 52%);
+  flex-grow: 2;
+  border: none;
+  box-decoration-break: none;
+  outline-style: none;
+}
+main .container .inputs .filterRegion {
+  margin: 3% 0;
+  width: 10%;
+  height: 7vh;
+  align-items: center;
+  font-size: 14px;
+  font-family: 'Nunito Sans';
+  background-color: #fff;
+  box-shadow: hsl(0, 0%, 52%);
+  display: flex;
+}
+main .container .inputs .filterRegion #region {
+  width: 90%;
+  border: none;
+  outline-style: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3%;
+}
+main .container .card-countries {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 3rem;
+  overflow: hidden;
+}
+main .container .card-countries article {
+  background-color: #fff;
+  border-radius: 3%;
+}
+main .container .card-countries article img {
+  max-width: 100%;
+  height: auto;
+  border-top-left-radius: 3%;
+  border-top-right-radius: 3%;
+}
+main .container .card-countries article h3 {
+  padding: 2% 10%;
+  font-weight: 600;
+}
+main .container .card-countries article p {
+  padding: 0 10%;
+}
+@media (max-width: 375px) {
+  header {
+    border-bottom: 2px solid hsla(0, 0%, 52%, 0.1);
+  }
+  header nav {
+    /*width: 100%;*/
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+  }
+  header nav h1 {
+    font-size: 14px;
+  }
+  main .container {
+    width: 90%;
+  }
+  main .container .inputs {
+    display: block;
+  }
+  main .container .inputs .search {
+    width: 100%;
+  }
+  main .container .inputs .filterRegion {
+    width: 50%;
+  }
+  main .container .card-countries {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 3rem;
+  }
+}

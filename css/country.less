@@ -1,0 +1,74 @@
+
+a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Nunito';
+    margin: 2% 0;
+    -webkit-box-shadow: 0px 0px 20px 4px rgba(176,176,176,0.89); 
+box-shadow: 0px 0px 50px 4px rgba(176,176,176,0.89);
+}
+
+
+.countries {
+    display: flex;
+
+    .countries-container {
+        display: flex;
+
+        img {
+
+            max-width: 50%;
+           
+            margin: 0 auto;
+        }
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Nunito';
+        font-size: 14px;
+
+        section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            overflow: hidden;
+        }
+    }
+    .borderCountries{
+        display: flex;
+    }
+}
+@media(max-width: 375px){
+    .countries {
+        display: flex;
+        flex-direction: column;
+    
+        .countries-container {
+            display: flex;
+    
+            img {
+    
+                max-width: 100%;
+               
+                margin: 0 auto;
+            }
+        }
+    
+        .description {
+            display: flex;
+            flex-direction: column;
+    
+            section {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap:1rem;
+                overflow: hidden;
+            }
+        }
+        .borderCountries{
+            display: block;
+        }
+    }
+}
